@@ -9,11 +9,17 @@
 
             Console.WriteLine("Digite um número de 1 a 26:");
             int numero = int.Parse(Console.ReadLine());
+            List<char> letras = new List<char>();
             if (numero >= 1 || numero <= 26)
             {
                 for (int i = 0; i < numero; i++)
                 {
-                    Console.WriteLine(new List<char> { (char)('a' + i) }[0]);
+                    letras.Add((char)('a' + i));
+                }
+
+                foreach (var letra in letras)
+                {
+                    Console.Write(letra);
                 }
             }
             else
@@ -24,7 +30,7 @@
             //Desafio extra: Faça o código em duas linhas e sem usar List
 
             int numero2 = int.Parse(Console.ReadLine());
-            for (int i = 0; i < numero2 && numero2 >= 1 && numero2 <= 26; i++) Console.WriteLine((char)('a' + i));
+            for (int i = 0; i < numero2 && numero2 >= 1 && numero2 <= 26; i++) Console.Write((char)('a' + i));
 
 
         }
